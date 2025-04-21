@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <limits.h>
+//For INT_MIN INT MAX that is intiger limit 
 
 int main() {
     long long n, k, a;
