@@ -27,6 +27,7 @@ int main()
     {
         printf("NO\n");
     }
+    problem;
 
     return 0;
 }
