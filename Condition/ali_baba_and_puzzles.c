@@ -1,32 +1,35 @@
+
 #include <stdio.h>
-
-int main()
-{
-    int a, b, c;
-    long long int d;
-    scanf("%d %d %d %lld", &a, &b, &c, &d);
+ 
+int main() {
+    long long a, b, c, d;
+    scanf("%lld %lld %lld %lld", &a, &b, &c, &d);
+ 
+    long long result;
+    int found = 0;
+ 
+ 
+    result = a + b - c; 
+    if (result == d) found = 1;
     
-    if (
-        ((a + b) * c == d) ||
-        ((a * b) + c == d) ||
-        ((a - b) * c == d) ||
-        ((a * b) - c == d) ||
-        ((a + c) * b == d) ||
-        ((a * c) + b == d) ||
-        ((a - c) * b == d) ||
-        ((a * c) - b == d) ||
-        ((b + c) * a == d) ||
-        ((b * c) + a == d) ||
-        ((b - c) * a == d) ||
-        ((b * c) - a == d)
-    )
-    {
+    result = a + b * c; 
+    if (result == d) found = 1;
+ 
+    result = a - b + c; 
+    if (result == d) found = 1;
+    
+    result = a - b * c; 
+    if (result == d) found = 1;
+ 
+    result = a * b + c; 
+    if (result == d) found = 1;
+    result = a * b - c; 
+    if (result == d) found = 1;
+ 
+    if (found)
         printf("YES\n");
-    }
     else
-    {
         printf("NO\n");
-    }
-
+ 
     return 0;
 }
